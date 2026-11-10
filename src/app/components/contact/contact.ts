@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './contact.css'
 })
 export class Contact {
-  readonly name = 'Denix Singh Gill';
+  readonly name = 'Denix Gill';
 
   // Public contact email for portfolio
   readonly email = 'Niffsxfix@gmail.com';
