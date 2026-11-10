@@ -1,0 +1,104 @@
+
+<section class="contact-section section-container" id="contact">
+
+  <div class="contact-heading">
+    <span class="section-kicker">
+      <span class="kicker-line"></span>
+      CONTACT
+    </span>
+
+    <h2>
+      Let's work
+      <span class="gradient-text">together.</span>
+    </h2>
+
+    <p>
+      I'm currently looking for opportunities to grow
+      as a software developer and contribute to real projects.
+    </p>
+  </div>
+
+  <div class="opportunity-card">
+    <div class="opportunity-dot"></div>
+
+    <div>
+      <span class="eyebrow">OPEN TO OPPORTUNITIES</span>
+      <h3>Software Development Apprenticeship</h3>
+      <p>{{ opportunity }}</p>
+    </div>
+  </div>
+
+  <div class="contact-grid">
+
+    <article class="contact-card">
+      <div class="contact-icon" aria-hidden="true">&#64;</div>
+      <span class="eyebrow">EMAIL</span>
+      <h3>Let's talk</h3>
+      <p>{{ email }}</p>
+
+      <a [href]="emailLink" class="card-link">
+        Send Email <span aria-hidden="true">↗</span>
+      </a>
+    </article>
+
+    <article class="contact-card">
+      <div class="contact-icon" aria-hidden="true">in</div>
+      <span class="eyebrow">LINKEDIN</span>
+      <h3>Connect with me</h3>
+      <p>{{ name }}</p>
+
+      <a
+        [href]="linkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-link">
+        View LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+    </article>
+
+    <article class="contact-card">
+      <div class="contact-icon" aria-hidden="true">&lt;/&gt;</div>
+      <span class="eyebrow">GITHUB</span>
+      <h3>Explore my code</h3>
+      <p>Programming projects and source code</p>
+
+      <a
+        [href]="github"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-link">
+        View GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </article>
+
+    <article class="contact-card">
+      <div class="contact-icon" aria-hidden="true">↓</div>
+      <span class="eyebrow">CURRICULUM VITAE</span>
+      <h3>Download my CV</h3>
+      <p>Available in Danish and English</p>
+
+      <div class="cv-buttons">
+        <a [href]="cvDanish" download="Denix_Gill_CV_Dansk.pdf">
+          Dansk <span aria-hidden="true">↓</span>
+        </a>
+
+        <a [href]="cvEnglish" download="Denix_Gill_CV_English.pdf">
+          English <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="contact-bottom">
+    <p>
+      Interested in discussing an apprenticeship
+      or a software development opportunity?
+    </p>
+
+    <a class="contact-primary" [href]="emailLink">
+      Get in Touch <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+</section>

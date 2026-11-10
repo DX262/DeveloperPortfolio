@@ -1,0 +1,94 @@
+
+<header
+  class="site-header"
+  [class.header-scrolled]="isScrolled()">
+
+  <div class="navbar-wrapper">
+
+    <nav class="navbar" aria-label="Main navigation">
+
+      <!-- BRAND -->
+      <a
+        class="brand"
+        href="#home"
+        (click)="closeMenu()">
+
+        <span class="brand-symbol">&lt;/&gt;</span>
+
+        <span class="brand-name">
+          DENIX<span class="brand-dot">.</span>
+        </span>
+      </a>
+
+      <!-- DESKTOP LINKS -->
+      <div class="desktop-nav">
+        @for (item of navigation; track item.href) {
+          <a
+            [href]="item.href"
+            [class.nav-active]="activeSection() === item.href.substring(1)">
+            {{ item.label }}
+          </a>
+        }
+      </div>
+
+      <!-- CONTACT BUTTON -->
+      <a class="nav-cta" href="#contact">
+        <span>Let's Connect</span>
+        <span class="cta-arrow">↗</span>
+      </a>
+
+      <!-- MOBILE TOGGLE -->
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="mobile-navigation"
+        [attr.aria-expanded]="menuOpen()"
+        (click)="toggleMenu()">
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+
+    <!-- MOBILE NAVIGATION -->
+    @if (menuOpen()) {
+      <nav
+        id="mobile-navigation"
+        class="mobile-navigation"
+        aria-label="Mobile navigation">
+
+        @for (item of navigation; track item.href) {
+          <a
+            [href]="item.href"
+            [class.mobile-active]="activeSection() === item.href.substring(1)"
+            (click)="closeMenu()">
+
+            <span>{{ item.label }}</span>
+            <span>↗</span>
+          </a>
+        }
+
+      </nav>
+    }
+
+    <!-- SCROLL PROGRESS -->
+    <div
+      class="scroll-progress-track"
+      role="progressbar"
+      aria-label="Page scroll progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      [attr.aria-valuenow]="scrollProgress()">
+
+      <div
+        class="scroll-progress-fill"
+        [style.width.%]="scrollProgress()">
+      </div>
+
+    </div>
+
+  </div>
+</header>

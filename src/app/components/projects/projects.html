@@ -1,0 +1,217 @@
+
+<!-- SOFTWARE PROJECTS -->
+<section class="content-section section-container" id="projects">
+  <div class="section-heading">
+    <span class="section-kicker">
+      <span class="kicker-line"></span>
+      04 / MY PROJECTS
+    </span>
+
+    <h2>
+      Turning ideas into
+      <span class="gradient-text">working software.</span>
+    </h2>
+
+    <p class="section-description">
+      Selected projects showing my experience with
+      application development, frontend design,
+      backend programming and databases.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.number) {
+      <article class="project-card glass-panel">
+        <div class="project-preview">
+          <div class="preview-grid"></div>
+          <div class="preview-orb"></div>
+
+          <div class="preview-topbar">
+            <span class="window-dots" aria-hidden="true">
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+
+            <span>PROJECT {{ project.number }}</span>
+          </div>
+
+          <div class="preview-center">
+            <span class="preview-code">&lt;/&gt;</span>
+            <strong>{{ project.title }}</strong>
+            <small>SOFTWARE DEVELOPMENT</small>
+          </div>
+
+          <span class="preview-bottom">
+            ANGULAR <span>×</span> ASP.NET CORE
+          </span>
+        </div>
+
+        <div class="project-content">
+          <span class="project-category">
+            {{ project.category }}
+          </span>
+
+          <h3>{{ project.title }}</h3>
+
+          <p>{{ project.description }}</p>
+
+          <div class="project-highlights">
+            @for (highlight of project.highlights; track highlight) {
+              <div>
+                <span class="highlight-check">✓</span>
+                {{ highlight }}
+              </div>
+            }
+          </div>
+
+          <div class="skill-tags">
+            @for (tech of project.technologies; track tech) {
+              <span>{{ tech }}</span>
+            }
+          </div>
+
+          <div class="project-actions">
+            <a
+              [href]="project.github || github"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              {{ project.github ? 'View Source Code' : 'Visit My GitHub' }}
+
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
+
+<!-- ROBLOX GAME DEVELOPMENT -->
+<section
+  class="content-section section-container game-section"
+  id="gamedev">
+
+  <div class="game-section-heading">
+    <div class="game-heading-content">
+      <span class="section-kicker">
+        <span class="kicker-line"></span>
+        05 / GAME DEVELOPMENT
+      </span>
+
+      <h2>
+        Code. Create.
+        <span class="gradient-text">Play.</span>
+      </h2>
+
+      <p class="section-description">
+        Game development gives me another way to explore
+        programming and creativity. I use Roblox Studio
+        and Luau to work with gameplay mechanics,
+        interactive experiences and game systems.
+      </p>
+
+      <div class="game-intro-tags">
+        <span>Roblox Studio</span>
+        <span>Luau Scripting</span>
+        <span>Game Design</span>
+      </div>
+    </div>
+
+    <div class="game-heading-decoration" aria-hidden="true">
+      <div class="game-deco-frame">
+        <span>&lt;/&gt;</span>
+        <small>GAME DEV</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-projects-grid">
+    @for (game of gameProjects; track game.number) {
+      <article
+        class="game-project-card"
+        [class.game-stars]="game.theme === 'stars'"
+        [class.game-forest]="game.theme === 'forest'">
+
+        <div class="game-visual">
+          <div class="game-visual-grid"></div>
+
+          <div class="game-visual-top">
+            <span>GAME {{ game.number }}</span>
+            <span class="game-status">{{ game.status }}</span>
+          </div>
+
+          <div class="game-artwork" aria-hidden="true">
+            @if (game.theme === 'stars') {
+              <div class="star-glow"></div>
+              <div class="star-shape">★</div>
+              <span class="mini-star mini-star-one">✦</span>
+              <span class="mini-star mini-star-two">✧</span>
+              <span class="mini-star mini-star-three">✦</span>
+            } @else {
+              <div class="lantern-glow"></div>
+              <div class="lantern-handle"></div>
+              <div class="lantern-body">
+                <div class="lantern-light"></div>
+              </div>
+              <span class="firefly firefly-one">✦</span>
+              <span class="firefly firefly-two">✦</span>
+              <span class="firefly firefly-three">✦</span>
+            }
+          </div>
+
+          <div class="game-visual-bottom">
+            <span>{{ game.title }}</span>
+            <span>ROBLOX</span>
+          </div>
+        </div>
+
+        <div class="game-details">
+          <div class="game-category-row">
+            <span class="game-category">{{ game.category }}</span>
+            <span class="game-project-number">{{ game.number }}</span>
+          </div>
+
+          <h3>{{ game.title }}</h3>
+
+          <p class="game-description">
+            {{ game.description }}
+          </p>
+
+          <div class="game-features">
+            <h4>
+              {{ game.status === 'Concept'
+                ? 'Planned gameplay'
+                : 'Game design and systems' }}
+            </h4>
+
+            @for (feature of game.features; track feature) {
+              <div class="game-feature">
+                <span class="game-feature-icon">✦</span>
+                <span>{{ feature }}</span>
+              </div>
+            }
+          </div>
+
+          <div class="game-technologies">
+            @for (tech of game.technologies; track tech) {
+              <span>{{ tech }}</span>
+            }
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+
+  <div class="game-footer-note">
+    <span class="game-note-icon">✦</span>
+
+    <p>
+      Game development is one of my personal interests.
+      I enjoy experimenting with new gameplay ideas,
+      improving my scripting skills and creating
+      interactive worlds.
+    </p>
+  </div>
+</section>

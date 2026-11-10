@@ -1,0 +1,44 @@
+
+<section class="content-section section-container" id="skills">
+  <div class="section-heading">
+    <span class="section-kicker">
+      <span class="kicker-line"></span>
+      02 / MY SKILLS
+    </span>
+
+    <h2>
+      What I know.
+      <span class="gradient-text">What I build.</span>
+    </h2>
+
+    <p class="section-description">
+      My technical skills cover backend and frontend development,
+      databases, Roblox game development, computer hardware
+      and Windows systems. I enjoy exploring new technologies
+      and improving my abilities through practical projects.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+    @for (group of skillGroups; track group.number) {
+      <article class="skill-card glass-panel">
+        <div class="skill-header">
+          <div class="skill-symbol">{{ group.icon }}</div>
+
+          <span class="skill-number">
+            {{ group.number }} / {{ skillGroups.length }}
+          </span>
+        </div>
+
+        <h3>{{ group.title }}</h3>
+        <p>{{ group.description }}</p>
+
+        <div class="skill-tags">
+          @for (skill of group.skills; track skill) {
+            <span>{{ skill }}</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

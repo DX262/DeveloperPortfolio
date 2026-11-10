@@ -1,0 +1,53 @@
+
+<section class="content-section section-container" id="education">
+  <div class="section-heading">
+    <span class="section-kicker">
+      <span class="kicker-line"></span>
+      03 / EDUCATION
+    </span>
+
+    <h2>
+      My journey into
+      <span class="gradient-text">software development.</span>
+    </h2>
+
+    <p class="section-description">
+      Developing my programming skills through education,
+      practical assignments and personal projects.
+    </p>
+  </div>
+
+  <div class="education-layout">
+    <article class="education-feature glass-panel">
+      <span class="feature-label">MY EDUCATION</span>
+
+      <div class="education-decoration" aria-hidden="true">
+        <span>&lt;/&gt;</span>
+      </div>
+
+      <h3>Data Technician</h3>
+      <h4>Specializing in Programming</h4>
+      <p>TEC, Denmark</p>
+
+      <div class="education-status">
+        <span class="status-light"></span>
+        PREPARING FOR H4
+      </div>
+    </article>
+
+    <div class="timeline">
+      @for (entry of timeline; track entry.title) {
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+
+          <div class="timeline-content">
+            <span>{{ entry.label }}</span>
+            <h3>{{ entry.title }}</h3>
+            <h4>{{ entry.organization }}</h4>
+            <p>{{ entry.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

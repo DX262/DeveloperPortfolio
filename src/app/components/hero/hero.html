@@ -1,0 +1,134 @@
+
+<section class="hero section-container" id="home">
+
+  <div class="hero-copy">
+
+    <div class="status-pill">
+      <span class="status-light"></span>
+      SOFTWARE DEVELOPER PORTFOLIO
+    </div>
+
+    <div class="hero-identity">
+      <p class="hero-greeting">Hi, I'm</p>
+
+      <h1 class="hero-name">
+        <span class="gradient-text">{{ fullName }}</span><span class="title-period">.</span>
+      </h1>
+
+      <h2 class="hero-role">
+        Full Stack Developer
+      </h2>
+    </div>
+
+    <p class="hero-description">
+      I build web applications using C#, ASP.NET Core,
+      Angular and SQL Server. I also work with computer
+      hardware, Windows systems and game development
+      using Roblox Studio and Luau.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button button-primary" href="#projects">
+        Explore My Projects
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <a
+        class="button button-secondary"
+        [href]="github"
+        target="_blank"
+        rel="noopener noreferrer">
+        View GitHub
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="hero-focus">
+      <div class="focus-item">
+        <div class="focus-icon" aria-hidden="true">&lt;/&gt;</div>
+        <div>
+          <strong>Software Development</strong>
+          <span>Backend and Frontend</span>
+        </div>
+      </div>
+
+      <div class="focus-divider"></div>
+
+      <div class="focus-item">
+        <div class="focus-icon" aria-hidden="true">▣</div>
+        <div>
+          <strong>Computer Hardware</strong>
+          <span>Building and Troubleshooting</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-tech">
+      <p>TECHNOLOGIES I WORK WITH</p>
+
+      <div class="hero-tech-list">
+        @for (technology of technologies; track technology) {
+          <span>{{ technology }}</span>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-art" aria-hidden="true">
+    <div class="orb-stage">
+
+      <div class="orb-aura"></div>
+
+      <div class="orb-ring ring-one"></div>
+      <div class="orb-ring ring-two"></div>
+      <div class="orb-ring ring-three"></div>
+
+      <div class="orb-sphere">
+        <div class="orb-highlight"></div>
+        <div class="orb-surface-ring"></div>
+      </div>
+
+      <div class="floating-panel floating-backend">
+        <span class="floating-icon">&#123; &#125;</span>
+        <div>
+          <small>BACKEND</small>
+          <strong>C# &amp; .NET</strong>
+        </div>
+      </div>
+
+      <div class="floating-panel floating-frontend">
+        <span class="floating-icon">&lt;/&gt;</span>
+        <div>
+          <small>FRONTEND</small>
+          <strong>Angular</strong>
+        </div>
+      </div>
+
+      <div class="floating-panel floating-hardware">
+        <span class="floating-icon">▣</span>
+        <div>
+          <small>HARDWARE</small>
+          <strong>PC Building</strong>
+        </div>
+      </div>
+
+      <div class="floating-panel floating-windows">
+        <span class="floating-icon">⊞</span>
+        <div>
+          <small>COMPUTER SYSTEMS</small>
+          <strong>Windows</strong>
+        </div>
+      </div>
+
+      <span class="orb-spark spark-one"></span>
+      <span class="orb-spark spark-two"></span>
+      <span class="orb-spark spark-three"></span>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL TO EXPLORE</span>
+    <span class="scroll-line"></span>
+  </div>
+
+</section>
